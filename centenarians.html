@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>NEATs Centenarians</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: #1c184e;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	text-align: center;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #000000;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #000000;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+	color: #666666;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 960px;
+	background: #FFF;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #ffffff;
+}
+
+/* ~~ These are the columns for the layout. ~~
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 180px;
+	padding-bottom: 10px;
+	background-color: #EEE;
+}
+.content {
+	width: 700px;
+	float: left;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+
+.sidebar1 p {
+    padding: 5px;
+    margin: 10px;
+    text-align: left;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	color: #FFF;
+	background-color: #1c184e;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.container .header table tr td {
+	text-align: center;
+}
+.container .footer p {
+	text-align: center;
+}
+/*social media icons at nav bar*/
+.button {
+   transition:all .25s ease-in-out;
+   -moz-transition:all .25s ease-in-out;
+   -webkit-transition:all .25s ease-in-out;
+
+
+  float: left;;
+  text-align: center;
+  height:30px;
+  width:30px;
+  margin-left:15px;
+  opacity:.5;
+}
+
+.button:hover {
+   transition:all .25s ease-in-out;
+   -moz-transition:all .25s ease-in-out;
+   -webkit-transition:all .25s ease-in-out;
+  opacity:1;
+
+  margin-top:-10px;
+  -webkit-box-shadow:  0px 3px 10px 2px rgba(0, 0, 0, .5);
+  box-shadow:  0px 3px 6px 1px rgba(0, 0, 0, .5);
+}
+
+.button img {
+  margin-top:-10px;
+  margin-left:-10px;
+}
+
+/* instagram image fix */
+#img_2 {
+  margin:0;
+}
+
+-->
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarVertical.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+a:hover {
+	color: #CCCCCC;
+}
+a:active {
+	color: #CCCCCC;
+}
+p {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	text-align: left;
+	white-space: normal;
+}
+h2 {
+	font-family: Verdana, Geneva, sans-serif;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+h1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 40px;
+	font-weight: bolder;
+	line-height: 40px;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><!-- end .header -->
+    <table width="925" border="0">
+      <tr>
+        <td width="246"><img src="images/neatsnewlogo.png" width="180" height="90" alt="NEATs NorthEast Active Timers Logo" /></td>
+        <td width="348"><h1>NorthEast <br />
+Active Timers</h1></td>
+        <td width="317">3119 S. Jamestown Ave<br />
+Tulsa, Ok 74135<br />
+Phone: 918-743-1303<br />
+Fax: 918-743-1304</td>
+      </tr>
+    </table>
+  </div>
+  <div class="sidebar1">
+    <ul id="MenuBar1" class="MenuBarVertical">
+      <li><a href="index.html">Home</a></li>
+	  		<li><a class="MenuBarItemSubmenu" href="aboutus.html">About Us</a>
+	        <ul>
+				<li><a href="aboutus.html#missionstatement">Mission Statement</a></li>
+				<li><a href="aboutus.html#programs">Programs</a></li>
+				<li><a href="aboutus.html#focus">Focus</a></li>
+				<li><a href="aboutus.html#adopt">Adopt a Centenarian</a></li>
+				<li><a href="aboutus.html#monthly">Monthly Gatherings</a></li>
+				<li><a href="aboutus.html#travel">Travel</a></li>
+				<li><a href="aboutus.html#questions">Questions</a></li>
+		  </ul>
+		  </li>
+			<!--take out the programs page until further notice
+
+					  <li><a class="MenuBarItemSubmenu" href="programs.html">Programs</a>
+				        <ul>
+					          <li><a href="programs.html#programsofNEATs">Programs of NEATS</a></li>
+					          <li><a href="programs.html#SupportGroup">Support Groups</a></li>
+					          <li><a href="programs.html#NEATsServices">NEATS Services</a></li>
+				        </ul>
+				      </li>
+	  -->
+      <li><a href="trips.html">Trips</a></li>
+      <li><a href="news.html">Newsletter</a></li>
+      <li><a href="Fundraisers.html">Fundraisers</a></li>
+      <!--<li><a href="eventpics.html">Event Pictures</a></li>-->
+      <li><a href="Centenarians.html">Centenarians</a></li>
+      <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+    <br />
+<p>Join us on <br />Social Media</p>
+    <!--social media icons -->
+        <!-- FACEBOOK -->
+<a href="https://www.facebook.com/NEATs-of-Tulsa-840402436090645/" target="_blank">
+<div class="button">
+<img src="http://www.bryce-snyder.com/hosted/color/Facebook.png" height="50" width="50" alt="" />
+</div><!--end of button-->
+</a>
+<!-- TWITTER -->
+<a href="https://twitter.com/NEATsTulsa" target="_blank">
+<div class="button">
+<img src="http://www.bryce-snyder.com/hosted/color/Twitter.png" height="50" width="50" alt="" />
+</div><!--end of button-->
+</a>
+<!-- YOUTUBE -->
+<a href="https://www.youtube.com/channel/UC0T4-WcJOwZ4hqQPCEcLulA" target="_blank">
+<div class="button">
+<img src="http://www.bryce-snyder.com/hosted/color/Youtube.png" height="50" width="50" alt="" />
+</div><!--end of button-->
+</a>
+
+<!-- LINKEDIN --><!--will add linkedin when they can get an account established
+
+<a href="#">
+<div class="button">
+<img src="http://www.bryce-snyder.com/hosted/color/LinkedIn.png" height="50" width="50" alt="" />
+</div> </a>    --><!--end of button-->
+
+<!-- INSTAGRAM --> <!--will see if they want to add an instagram account or not
+
+<a href="#">
+<div class="button">
+<img src="http://www.bridgeoffaith.org/instagram-logo.gif" height="31" width="31" alt="" id="img_2"/>
+</div></a>	--><!--end of button-->
+
+  <!-- end .sidebar1 --></div>
+  <div class="content">
+<h2>Centenarians</h2>
+<p><img src="images/2016updates/induction-at-eischens-zledbetter.jpg" alt="Centenarian Club Picture" width="220" height="325" hspace="10" vspace="10" align="left" /> Centenarians of Oklahoma is a rapidly growing, not-for-profit, organization whose sole purpose is to honor citizens of Oklahoma who are 100 years of age or older.  To date over 2000 Centenarians have been inducted into Centenarians of Oklahoma.</p>
+<p>Pictured to the left: Zeke Ledbetter, 104, of El Reno</p>
+<p>Volunteers travel over the entire state to honor these Special Seniors.  There are no dues, fees, or costs.  Club members are awarded a Membership Certificate, a "Golden Okie" pin, and a "guardian Angel" emblem.  They also receive monthly newsletters and special recognition at all public NEATs events.</p>
+<p>If you know of a Centenarian you would like to honor . . . <br />please call (918) 743-1303 or  (918) 510-0150.</p>
+<p><a href="Forms/the-centenarians-of-ok.pdf" target="_blank">Click to download the pdf forms</a></p>
+<p>After you have downloaded and completed the form, simply e-mail, fax, or mail the form to the NEATs office as listed at the top of the page.</p>
+<p>For guidelines to Adopt a Centenarian <a href="Forms/adopters-guidelines-feb2016.pdf" target="_blank">click here</a>.</p>
+<p>&nbsp;</p>
+
+<font size="-1"><img src="images/2016updates/2016-opal-moss-bday.jpg" alt="2016 Opal Moss Birthday" width="423" height="318" hspace="10" vspace="10" align="right" /></font>
+<br></br>
+<br></br>
+<p><font size="2">Pictured to the right are Centenarians Owen Brown (102), Madaline Teel (101) and Opal Moss (104); these three live at the Broadmoor Retirement Community Tulsa.</font></p>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+	<h3>INTERESTING INFORMATION ABOUT CENTENARIANS:</h3>
+		<p>The oldest verified person who has ever lived is Jeanne Calment 1875-1997. She lived in France; made it to 122 years and 164 days.</p>
+		<p>The oldest known person living in the world now is in Italy: Emma Morano is 116 years of age. </p>
+		<p>The oldest known person living in the United States is in New Jersey: Adele Dunlap is 113. </p>
+		<p>The oldest known person living in Oklahoma is Mary Erbin of Jones who is 109 in August 2016. </p>
+		<p>Methuselah in the Bible lived to be 969 years of age, according to the King James Version of the Bible. </p>
+<br></br>
+<br></br>
+
+<h3>We encourage people to adopt a Centenarian.</h3>
+<h4>For more information, please contact our Centenarian Coordinator, Gloria.</h4>
+<p><font size="3" /><strong>Gloria Helmuth</strong> </p>
+<p><font size="3" />Phone: (918) 743-1303</p>
+<p><font size="3" />Fax: (918) 743-1304</p>
+	<p><font size="3" />E-mail Gloria directly at Eghelmuth@aol.com or by simply <a href="mailto:Eghelmuth@aol.com?Subject=NEATs%20Centenarian%20question%20Emailed%20Through%20Website" target="_top"> clicking this link.</a></p>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+
+<!-- end .content -->
+  </div>
+  <div class="footer">
+    <p>
+    <font size="-2"> </font></p><!--website maintained by -->
+    <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+</body>
+</html>
+<!--ALL CHANGES AND UPDATES BY WWW.KNOWSCODES.COM -->
