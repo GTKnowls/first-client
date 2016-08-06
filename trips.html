@@ -120,6 +120,40 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background
 	color: #FFF;
 	background-color: #1c184e;
 }
+/**FIGURE BOX**/
+
+figure {
+	clear: left;
+	width: 100%;
+	background-color: #e6e6e6;
+	margin: 0;
+	padding: 0;
+}
+
+figure div {
+	overflow: scroll;
+	white-space: nowrap;
+	margin-bottom: 5px;
+}
+figure img {
+	margin: 10px;
+
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+
+figcaption {
+	display: block;
+	background-color: #e6e6e6;
+	font-size: 1em;
+	color:#4D4D4D;
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 5px 0px 5px 0px;
+}
+
 
 /* ~~ miscellaneous float/clear classes ~~ */
 .fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
@@ -228,14 +262,14 @@ Fax: 918-743-1304</td>
     <div class="sidebar1">
 		<ul id="MenuBar1" class="MenuBarVertical">
 	      <li><a href="index.html">Home</a></li>
-		  		<li><a class="MenuBarItemSubmenu" href="aboutus.html">About Us</a>
-		        <ul>
+		  	 <li><a class="MenuBarItemSubmenu" href="aboutus.html">About Us</a>
+    		  <ul>
 					<li><a href="aboutus.html#missionstatement">Mission Statement</a></li>
-					<li><a href="aboutus.html#programs">Programs</a></li>
-					<li><a href="aboutus.html#focus">Focus</a></li>
-					<li><a href="aboutus.html#adopt">Adopt a Centenarian</a></li>
-					<li><a href="aboutus.html#monthly">Monthly Gatherings</a></li>
-					<li><a href="aboutus.html#travel">Travel</a></li>
+                    <li><a href="aboutus.html#programs">Programs</a></li>
+                    <li><a href="aboutus.html#monthly">Monthly Gatherings</a></li>
+                    <li><a href="aboutus.html#focus">Focus</a></li>
+                    <li><a href="aboutus.html#travel">Travel</a></li>
+					<li><a href="aboutus.html#subscribers">Subscription Series</a></li>
 					<li><a href="aboutus.html#questions">Questions</a></li>
 			  </ul>
 			  </li>
@@ -303,7 +337,20 @@ Fax: 918-743-1304</td>
 
   </div>
   <div class="footer">
-    <p>
+    <p><figure><figcaption><br /><strong>Join NEATs Today!</strong> <br /><em>Travel the United States and Abroad with our Fun and Active Group!</em></figcaption>
+	             <div>
+	                <img src="img/slide03.png" alt="" />
+	                <img src="img/slide05.png" alt="" />
+	                <img src="img/slide04.png" alt="" />
+	                <img src="img/slide01.png" alt="" />
+	                <img src="img/slide02.png" alt="" />
+	                <img src="img/slide06.png" alt="" />
+	        <!--        <img src="img/slide07.jpg" alt="" /> -->
+	        <!--        <img src="img/slide08.png" alt="" /> -->
+	             </div>
+	             <figcaption>The above images are a few of our Previous Destinations!</figcaption><br />
+	          </figure>
+
     <font size="-2"></font></p><!--website maintained by -->
     <!-- end .footer --></div>
   <!-- end .container --></div>
